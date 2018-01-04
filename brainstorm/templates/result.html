@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Spectre sign up form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="{% static  "brainstorm/css/tablestyle.css "%}" />
+
+</head>
+
+<body  >
+<div id="up" style="margin-bottom: 2%;text-align:  center;">
+  <h1> Results</h1>
+  <a href="#">Facebook</a><a href="/brainstorm/levels/level1/">Play</a>
+</div>
+  <!-- Table starts here -->
+  <div style="display:flex;justify-content:center;">
+  <table id="table" class="table table-hover table-mc-light-blue">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Current Level</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {%  for x in all %}
+        <tr>
+          <td data-title="Rank">{{forloop.counter}}</td>
+          <td data-title="Name">{{x.user.username.title}}</td>
+          <td data-title="Level">{{x.current_level}} </td>
+
+        </tr>
+
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Spectre sign up form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="{% static  "brainstorm/css/style1.css "%}" />
+      <link rel="stylesheet" href="{% static "brainstorm/css/style.css" %}" />
+
+
+
+
+
+</head>
+
+<body >
+
+  <div class="levelImage">
+    <img  src="{% static "brainstorm/images/image1.jpg" %}" class="img-responsive">
+  </div>
+  <div class="levelImage">
+  <form method="POST" action="/brainstorm/levels/level{{levelnum}}/">
+      {% csrf_token %}
+      {{form.as_p}}
+      <div style="display: flex;justify-content:center;width:  15%;">
+      <input style="border: solid 2px;padding: 2%;padding-left: 10%;padding-right: 10%;font-weight: bold;width: 200%;" type="submit">
+      </div>
+  </form>
+  </div>
+  <div class="levelImage">
+    <a class="signup__link"  href="#">Facebook</a><a class="signup__link" href="{% url 'results' %}">Results</a><a class="signup__link" href="{% url 'logout' %}">Logout</a>
+  </div>
+</body>
+</html>

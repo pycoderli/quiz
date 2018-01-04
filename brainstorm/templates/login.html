@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html>
+<html >
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Spectre sign up form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700,300'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static  "brainstorm/css/style1.css "%}" />
+      <link rel="stylesheet" href="{% static "brainstorm/css/style.css" %}">
+
+      <script type='text/javascript' src="{%  static "brainstorm/js/jquery.particleground.js"  %}"></script>
+      <script type='text/javascript' src="{% static "brainstorm/js/demo.js" %}"></script>
+
+
+</head>
+
+<body id="particles" style="background:#1d79cadb">
+  <div class="signup__container">
+  <div class="container__child signup__form">
+    <h3 style="text-align:  center;font-size: 2.5em;color:  black;font-family: 'Monoton'">LOGIN</h2>
+    <form method="post" accept-charset="UTF-8">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li>
+            <input class="btn btn--form" type="submit" value="Login" />
+          </li>
+          <li>
+            <a class="signup__link" href="{% url 'signup' %}" style= "color:black">I'm new here.</a>
+          </li>
+        </ul>
+      </div>
+    </form>
+
+  </div>
+</div>
+</body>
+</html>
