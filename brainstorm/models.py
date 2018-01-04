@@ -18,7 +18,7 @@ def validate_even(value):
 class level(models.Model):
     levelnumber = models.IntegerField(primary_key = True)
     ans = models.CharField(max_length=45)
-    pic = models.ImageField(upload_to = 'static/brainstorm/images/', default = 'static/brainstorm/images/img1.jpg')
+    pic = models.FileField()
 
     def __str__(self):
         return str(self.levelnumber)
