@@ -25,7 +25,7 @@ SECRET_KEY = 'b-((vh114*3*lvgih7#7wn+xudg!*53lwwka)+_rf49w-$0@ed'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brainstorm2k18.herokuapp.com']
+ALLOWED_HOSTS = ['brainstorm2k18.herokuapp.com','localhost']
 
 
 # Application definition
@@ -131,3 +131,4 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 LOGOUT_REDIRECT_URL='/brainstorm/login/'
 LOGIN_REDIRECT_URL = '/brainstorm/levels/level1'
 LOGIN_URL='/brainstorm/login/'
+FILE_PATH_DIR='https://brainstorm2k18.herokuapp.com/static/brainstorm/images'

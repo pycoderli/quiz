@@ -56,6 +56,7 @@ def signup(request):
 def levels(request,levelnum): 
     current_user=Person.objects.get(user=request.user)
     current_user_level = current_user.current_level.levelnumber
+    imageurl="https://brainstorm2k18.herokuapp.com/static/brainstorm/images/"+level.objects.get(levelnumber=levelnum).pic+".jpg"
     if current_user_level != levelnum:
         return redirect('/brainstorm/levels/level'+str(current_user_level)+"/")
     else:
@@ -71,8 +72,8 @@ def levels(request,levelnum):
                     return HttpResponse("wrong ans")
         else:
             form=LevelIncreaseForm()  
-        return render(request,'level.html',{'form':form,'levelnum':levelnum})
-    return render(request,'level.html',{'username':username,'levelnumber':levelnumber})
+        return render(request,'level.html',{'form':form,'levelnum':levelnum,'imageurl':imageurl})
+    return render(request,'level.html',{'username':username,'levelnumber':levelnumber,'imageurl':imageurl})
 
 
 def results(request):
