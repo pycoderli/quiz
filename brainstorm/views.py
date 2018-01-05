@@ -78,7 +78,7 @@ def levels(request,levelnum):
 
 def results(request):
     all_users=Person.objects.all().order_by('current_level','levelentry')
-    return render(request,'result.html')    
+    return render(request,'result.html',{'all':all_users})    
 
 
 
