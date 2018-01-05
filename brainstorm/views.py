@@ -65,7 +65,7 @@ def levels(request,levelnum):
             if form.is_valid():
                 answer=form.cleaned_data['ans']
                 correctans = level.objects.get(levelnumber=current_user_level).ans
-                if answer==correctans:
+                if answer.lower()==correctans:
                     current_user.increaselevel()
                     return redirect('/brainstorm/levels/level'+str(current_user_level)+"/")
                 else:
