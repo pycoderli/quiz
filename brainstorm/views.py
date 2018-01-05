@@ -42,7 +42,7 @@ def signup(request):
             	new_user_form.user=user
             	new_user_form.save()
             	auth_login(request, user)
-            	return redirect('/brainstorm/levels/level1')
+            	return redirect('/brainstorm/login')
 
            
     else:
