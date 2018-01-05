@@ -17,7 +17,7 @@ class level(models.Model):
 class Person(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     college = models.CharField(max_length=100)
-    phoneno = models.IntegerField()
+    phoneno = models.CharField(max_length=20)
     current_level =  models.ForeignKey('level', on_delete=models.CASCADE, default=1) 
     levelentry = models.DateTimeField(auto_now=True)
     def __str__(self):
