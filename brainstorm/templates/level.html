@@ -23,6 +23,9 @@
 
   <div class="levelImage">
     <img  src="{{ imageurl }}" class="img-responsive">
+    {% if levelnum == 16 %}
+     <!-- Merry Christmas -->
+    {% endif %} 
   </div>
   <div class="levelImage">
   <form method="POST" action="/brainstorm/levels/level{{levelnum}}/">

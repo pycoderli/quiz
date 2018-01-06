@@ -25,7 +25,7 @@ SECRET_KEY = 'b-((vh114*3*lvgih7#7wn+xudg!*53lwwka)+_rf49w-$0@ed'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brainstorm2k18.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['brainstorm2k18.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -132,3 +132,4 @@ LOGOUT_REDIRECT_URL='/brainstorm/login/'
 LOGIN_REDIRECT_URL = '/brainstorm/levels/level1'
 LOGIN_URL='/brainstorm/login/'
 FILE_PATH_DIR='https://brainstorm2k18.herokuapp.com/static/brainstorm/images'
+
