@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b-((vh114*3*lvgih7#7wn+xudg!*53lwwka)+_rf49w-$0@ed'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['brainstorm2k18.herokuapp.com','localhost','127.0.0.1']
 
