@@ -69,7 +69,7 @@ def levels(request,levelnum):
                     current_user.increaselevel()
                     return redirect('/brainstorm/levels/level'+str(current_user_level)+"/")
                 else:
-                    return HttpResponse("wrong ans")
+                    return redirect('/brainstorm/levels/level'+str(current_user_level)+"/")
         else:
             form=LevelIncreaseForm()  
         return render(request,'level.html',{'form':form,'levelnum':levelnum,'imageurl':imageurl})
